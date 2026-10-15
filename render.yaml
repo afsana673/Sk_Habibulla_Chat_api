@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: sk-ai-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: CLIENT_TOKEN
+        generateValue: true
+      - key: MODEL
+        value: openrouter/free
