@@ -1,9 +1,8 @@
 import http from 'node:http';
 import crypto from 'node:crypto';
-
 const port = Number(process.env.PORT || 3000);
-const apiKey = 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;
-const clientToken = 369369;
+const apiKey = process.env.OPENROUTER_API_KEY;
+const clientToken = process.env.CLIENT_TOKEN;
 const model = process.env.MODEL || 'openrouter/free';
 const allowedOrigin = process.env.ALLOWED_ORIGIN || '';
 const requests = new Map();
